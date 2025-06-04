@@ -19,7 +19,7 @@ export default function Topbar() {
         <div className="flex items-center gap-4">
           {!isMobile && <DarkModeToggle />}
           <Button asChild className="text-sm">
-            <Link href="/the-onboarding">Come, Join the club</Link>
+            <Link href="/one-onboarding">Come, Join the club</Link>
           </Button>
         </div>
       </nav>

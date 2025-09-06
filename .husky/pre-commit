@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Run husky helper
+. "$(dirname "$0")/_/husky.sh"
+
+echo "hey buddy! checking your staged stuff first..."
+
+# Run lint-staged
+npx lint-staged || {
+  echo "bro... fix the lint/format issues before committing 🛠"
+  exit 1
+}
+
+echo "cool... now building your stuff. fingers crossed 🤞"
+
+# Run build
+npm run build || {
+  echo "hey buddy! call a civil engineer, build failed 💣"
+  exit 1
+}
+
+echo "you're all set buddy! commit goes through 🚀"
